@@ -43,13 +43,13 @@ def count_words(dataframe):
     df = df.rename(columns = {"text": "word"})
     df["count"] = 1
     df.to_csv()
-    df = df.groupby("word", as_index= False).agg({"count": sum})
+    df = df.groupby("word", as_index= False).agg({"count": "sum"})
     return df
 
 
 def save_output(dataframe, output_filename):
     """Save output to a file."""
-    dataframe.to_csv(output_filename, index=False, sep="\t")
+    dataframe.to_csv(output_filename, sep="\t")
 
 
 #
