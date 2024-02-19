@@ -22,7 +22,6 @@ series = dataframe["count"]
 
 print(dataframe)
 
-
 assert series["analytics"] == 5
 assert series["business"] == 7
 assert series["by"] == 3
