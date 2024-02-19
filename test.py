@@ -20,6 +20,8 @@ dataframe = pd.read_csv(
 dataframe = dataframe.set_index("word")
 series = dataframe["count"]
 
+print(dataframe)
+
 
 assert series["analytics"] == 5
 assert series["business"] == 7
